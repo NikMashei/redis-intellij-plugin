@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.nikmashei.intellijredisplugin.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.nikmashei.intellijredisplugin.MyBundle
 
 class MyApplicationService {
 
