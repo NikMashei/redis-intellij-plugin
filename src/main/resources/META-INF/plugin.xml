@@ -1,18 +1,16 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.nikmashei.intellijredisplugin</id>
-    <name>intellij-redis-plugin</name>
-    <vendor>nikmashei</vendor>
+  <id>com.github.nikmashei.intellijredisplugin</id>
+  <name>Redis</name>
+  <vendor>nikmashei</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.nikmashei.intellijredisplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.nikmashei.intellijredisplugin.services.MyProjectService"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.nikmashei.intellijredisplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow
+      id="My Sample Tool Window"
+      icon="AllIcons.General.ReaderMode"
+      anchor="right"
+      factoryClass="com.github.nikmashei.intellijredisplugin.components.RedisToolWindowFactory"/>
+  </extensions>
 </idea-plugin>
