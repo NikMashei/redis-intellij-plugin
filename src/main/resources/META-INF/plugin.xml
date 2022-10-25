@@ -8,9 +8,9 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <toolWindow
-      id="My Sample Tool Window"
+      id="Redis Tool"
       icon="AllIcons.General.ReaderMode"
       anchor="right"
-      factoryClass="com.github.nikmashei.intellijredisplugin.components.RedisToolWindowFactory"/>
+      factoryClass="dev.mashei.redisplugin.factory.RedisToolWindowFactory"/>
   </extensions>
 </idea-plugin>
