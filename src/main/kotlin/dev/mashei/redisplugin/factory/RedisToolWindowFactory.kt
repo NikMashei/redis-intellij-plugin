@@ -8,9 +8,9 @@ import dev.mashei.redisplugin.view.RedisToolWindow
 class RedisToolWindowFactory : ToolWindowFactory {
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val redisToolWindow = RedisToolWindow(project)
+        val redisToolWindow = RedisToolWindow(project, toolWindow)
         val cm = toolWindow.contentManager
-        val content = cm.factory.createContent(redisToolWindow.getContent(), "", false)
+        val content = cm.factory.createContent(redisToolWindow.content, "", false)
         cm.addContent(content)
     }
 }
