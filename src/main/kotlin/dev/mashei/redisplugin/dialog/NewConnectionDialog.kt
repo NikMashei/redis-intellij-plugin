@@ -15,15 +15,17 @@ class NewConnectionDialog(project: Project) : DialogWrapper(project) {
 
     override fun createCenterPanel(): JComponent {
         return panel {
-            row("Host:") {
-                textField()
-                    .horizontalAlign(HorizontalAlign.FILL)
-                    .bindText(connection::host)
-            }
-            row("Port:") {
-                textField()
-                    .horizontalAlign(HorizontalAlign.FILL)
-                    .bindText(connection::port)
+            group("Connection Settings") {
+                row("Host:") {
+                    textField()
+                        .horizontalAlign(HorizontalAlign.FILL)
+                        .bindText(connection::host)
+                }
+                row("Port:") {
+                    textField()
+                        .horizontalAlign(HorizontalAlign.FILL)
+                        .bindText(connection::port)
+                }
             }
             row {
                 button("Test Connection") {
