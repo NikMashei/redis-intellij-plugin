@@ -2,6 +2,7 @@ package dev.mashei.redisplugin.dialog
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.ui.dsl.builder.TopGap
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.dsl.gridLayout.HorizontalAlign
@@ -24,6 +25,11 @@ class NewConnectionDialog(project: Project) : DialogWrapper(project) {
                     .horizontalAlign(HorizontalAlign.FILL)
                     .bindText(connection::port)
             }
+            row {
+                button("Test Connection") {
+                    println("Test connection clicked")
+                }
+            }.topGap(TopGap.MEDIUM)
         }
     }
 
